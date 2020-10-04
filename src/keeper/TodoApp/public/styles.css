@@ -63,6 +63,9 @@ ul div input[type="checkbox"] {
   height: fit-content;
   width: fit-content;
 }
+div ul {
+  padding: 1rem;
+}
 button {
   padding: 0;
   border: none;
