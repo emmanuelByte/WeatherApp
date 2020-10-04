@@ -1,17 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// import "./keeper/practice/public/styles.css";
+// import App from "./keeper/practice/Contact-book/src/App";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// import App from "./weather/App";
+// import App from "./keeper/Keeper App/src/App";
+// import App from "./keeper/practice/emojipedia/src/components/App";
+// import Game from "../react-intro/src/index";
+// import App from "./keeper/practice/Login Form/src/App";
+// import App from "./keeper/practice/Login Form/src/Event Handling/App";
+// import App from "./keeper/practice/React-hook/src//getTime/App";
+import App from "./keeper/TodoApp/src/App";
+ReactDOM.render(<App className="App" />, document.getElementById("root"));
