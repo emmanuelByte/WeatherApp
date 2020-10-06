@@ -1,8 +1,7 @@
 import React from "react";
-import Header from "./header";
-import Note from "./note";
-import Footer from "./footer";
-import "../public/styles.css";
+import Header from "./component/header";
+import Note from "./component/note";
+import Footer from "./component/footer";
 function App() {
   return (
     <div>
@@ -10,7 +9,6 @@ function App() {
       <Note />
       <Footer />
     </div>
-    
   );
 }
 export default App;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 const Note = ({ title, note }) => {
   const [card, setCard] = useState([]);
   const [input, setInput] = useState({ title: "", content: "" });
-  const [isbool, setbool] = useState(true);
+  const [isbool, setbool] = useState(false);
   function onAdd() {
     const { title, content } = input;
     if (title && content) {
