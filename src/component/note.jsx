@@ -37,9 +37,11 @@ const Note = ({ title, note }) => {
       </div>
       <div className="field" style={{ display: isbool ? "flex" : "none" }}>
         <button onClick={() => setbool((pre) => !pre)}>-</button>
+
         <input
           type="text"
           name="title"
+          autoComplete="off"
           onChange={(e) => onInput(e)}
           placeholder="Title"
           value={input.title}
