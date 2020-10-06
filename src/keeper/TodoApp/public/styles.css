@@ -64,28 +64,36 @@ ul div input[type="checkbox"] {
   width: fit-content;
 }
 div ul {
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 button {
   padding: 0;
-  border: none;
   font-family: "Architects Daughter", cursive;
   text-decoration: none;
   padding-bottom: 3px;
+  border: none;
+  border: 2px solid hsl(198, 1%, 29%);
   border-radius: 5px;
-  background-color: #ffeaa7;
+}
+button:hover {
+  background-color: #c2b27f;
+  border: 1px solid hsl(198, 1%, 29%);
+}
+button span:hover {
+  background-color: transparent;
+  color: #f1f5f8;
 }
 button span {
   background: #f1f5f8;
   display: block;
+  border: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  border: 2px solid hsl(198, 1%, 29%);
 }
 
 li {
   text-align: left;
+  cursor: pointer;
   position: relative;
   padding: 0.5rem;
-  display: block;
 }

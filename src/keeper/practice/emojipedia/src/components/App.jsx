@@ -7,8 +7,12 @@ function App() {
   return (
     <div>
       <h1>
-        <span>emojipedia</span>
+        <span onClick={(e) => console.log(e.type)}>emojipedia</span>
       </h1>
+      <input
+        type="text"
+        onKeyPress={(e) => e.key === "Enter" && console.log(e.key)}
+      />
       <dl className="dictionary">
         {emojipedia.map((e, i) => (
           <Term

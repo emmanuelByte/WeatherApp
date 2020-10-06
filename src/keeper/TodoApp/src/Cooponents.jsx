@@ -1,7 +1,4 @@
 import React from "react";
-const Li = ({ item }) => {
-  return <li>{item} </li>;
-};
 const Heading = ({ name }) => {
   return (
     <div className="heading">
@@ -9,19 +6,57 @@ const Heading = ({ name }) => {
     </div>
   );
 };
-const Form = ({ heading, input, button }) => {
+function Form({ input, inChange, addCard }) {
   return (
     <div className="form">
-      {heading} {input} {button}
+      <Input input={input} inChange={inChange} addCard={addCard} />
+      <Button addCard={addCard} />
     </div>
   );
-};
-const Input = ({ handle }) => {
-  return <input type="text" onChange={handle} />;
+}
+
+function Input({ input, inChange, addCard }) {
+  return (
+    <input
+      type="text"
+      value={input}
+      onKeyPress={(e) => addCard(e)}
+      onChange={inChange}
+    />
+  );
+}
+function Button({ addCard }) {
+  return (
+    <button onClick={(e) => addCard(e)}>
+      <span>ADD</span>
+    </button>
+  );
+}
+
+const Lists = ({ card, onHandle }) => {
+  return (
+    <ul>
+      {card.map((e, i) => (
+        <TodoItem onHandle={onHandle} key={i} id={i} item={e} />
+      ))}
+    </ul>
+  );
 };
 
+const TodoItem = ({ item, id, onHandle }) => {
+  return (
+    <li
+      onClick={() => {
+        onHandle(id);
+      }}
+    >
+      {item}
+    </li>
+  );
+};
+export { Button };
+export { Lists };
 export { Form };
-
-export { Heading };
 export { Input };
-export { Li };
+export { TodoItem };
+export { Heading };
