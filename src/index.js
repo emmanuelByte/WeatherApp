@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./styles.css";
-import App from "./App";
-
-ReactDOM.render(<App className="App" />, document.getElementById("root"));
+// import App from "./app";
+import App from "./WeatherApp/App.jsx";
+ReactDOM.render(<App />, document.getElementById("root"));
